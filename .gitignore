@@ -2,13 +2,13 @@
 #
 # Get latest from https://github.com/github/gitignore/blob/master/Unity.gitignore
 #
-/[Ll]ibrary/
-/[Tt]emp/
-/[Oo]bj/
-/[Bb]uild/
-/[Bb]uilds/
-/[Ll]ogs/
-/[Mm]emoryCaptures/
+UnityProject_ITJ2021_OneRoom/[Ll]ibrary/
+UnityProject_ITJ2021_OneRoom/[Tt]emp/
+UnityProject_ITJ2021_OneRoom/[Oo]bj/
+UnityProject_ITJ2021_OneRoom/[Bb]uild/
+UnityProject_ITJ2021_OneRoom/[Bb]uilds/
+UnityProject_ITJ2021_OneRoom/[Ll]ogs/
+UnityProject_ITJ2021_OneRoom/[Mm]emoryCaptures/
 
 # Asset meta data should only be ignored when the corresponding asset is also ignored
 !/[Aa]ssets/**/*.meta
@@ -58,3 +58,8 @@ sysinfo.txt
 # Crashlytics generated file
 crashlytics-build.properties
 
+UnityProject_ITJ2021_OneRoom/Assets/Plugins/
+UnityProject_ITJ2021_OneRoom/Assets/TextMesh Pro/
+UnityProject_ITJ2021_OneRoom/Assets/TutorialInfo/
+UnityProject_ITJ2021_OneRoom/Assets/AnimationImporter.meta
+UnityProject_ITJ2021_OneRoom/Assets/Resources/AnimationImporter/
