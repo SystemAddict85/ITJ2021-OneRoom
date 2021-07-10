@@ -2,33 +2,48 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-[RequireComponent(typeof(PlayerInput))]
 public class ContextButton : MonoBehaviour
 {
-    private Image _image;
+    [SerializeField] private Image buttonImage;
+    [SerializeField] private Image equippedImage;
     [SerializeField] private InteractionHandler handler;
     private RectTransform _rect;
     private Animator _anim;
-    private PlayerInput _input;
 
-    private bool _hasControl = false;
     private void Awake()
     {
-        _input = GetComponent<PlayerInput>();
         _anim = GetComponentInChildren<Animator>();
         _rect = GetComponent<RectTransform>();
-        _image = GetComponentInChildren<Image>();
         
         handler.onInteractionInRange += EnterInteractionRange;
         handler.onInteractionOutOfRange += ExitInteractionRange;
+        handler.onUseVisualChange += UpdateVisuals;
+        handler.onItemPickup += EquipItem;
+        handler.onPlayerEnteredWithItem += () => ToggleEquipItem(true);
+
         ToggleButton(false);
+        ToggleEquipItem(false);
+    }
+
+    private void UpdateVisuals(Interaction interact)
+    {
+        _anim.SetFloat("contextEnum", (int) interact.type);
+        
+        if(interact.type != Interaction.InteractionType.Use)
+            ToggleEquipItem(false);
+    }
+
+    private void EquipItem(Interaction item)
+    {
+        var pickup = (PickupInteraction)item;
+        equippedImage.sprite = pickup.buttonSprite;
     }
 
     private void EnterInteractionRange(Interaction interact)
     {
         _rect.SetParent(interact.transform);
         _rect.localPosition = Vector3.up;
-        _anim.SetFloat("contextEnum", (int)interact.type);
+        UpdateVisuals(interact);
         ToggleButton(true);
     }
 
@@ -36,20 +51,16 @@ public class ContextButton : MonoBehaviour
     {
         _rect.SetParent(null);
         ToggleButton(false);
+        ToggleEquipItem(false);
+    }
+
+    private void ToggleEquipItem(bool showItem)
+    {
+        equippedImage.enabled = showItem;
     }
 
     private void ToggleButton(bool contextEnabled)
     {
-        _image.enabled = contextEnabled;
-        _hasControl = contextEnabled;
-    }
-
-    private void Update()
-    {
-        if (_hasControl == false)
-            return;
-
-        if (_input.Interact)
-            handler.UseInteraction();
+        buttonImage.enabled = contextEnabled;
     }
 }

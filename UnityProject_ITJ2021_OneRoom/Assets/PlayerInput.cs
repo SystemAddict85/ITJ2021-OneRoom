@@ -8,6 +8,7 @@ public class PlayerInput : InputMono
     public override float Vertical => Input.GetAxisRaw("Vertical");
 
     public bool Interact => Input.GetKeyDown(KeyCode.Space);
+    public bool ReturnItem => Input.GetKeyDown(KeyCode.X);
 
     public override bool HasInput3D()
     {
