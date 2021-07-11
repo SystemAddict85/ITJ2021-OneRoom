@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -12,10 +13,10 @@ public class InteractionHandler : ScriptableObject
     public void EnterInteractionRange(Interaction inter, bool playerEquipped = false)
     {
         _mostRecentInteraction = inter;
-        
-        if(playerEquipped)
+
+        if (playerEquipped)
             onPlayerEnteredWithItem?.Invoke();
-            
+
         onInteractionInRange?.Invoke(inter);
     }
 
@@ -24,6 +25,7 @@ public class InteractionHandler : ScriptableObject
         if (_mostRecentInteraction == inter)
         {
             onInteractionOutOfRange?.Invoke(inter);
+
             _mostRecentInteraction = null;
         }
     }
@@ -37,7 +39,6 @@ public class InteractionHandler : ScriptableObject
         }
 
         inter.ReturnInteraction();
-        
     }
 
     public void PickupItem(Interaction item)
@@ -59,6 +60,7 @@ public class InteractionHandler : ScriptableObject
             else
                 use.onWrongEquipment?.Invoke();
         }
+
         return false;
     }
 
@@ -67,6 +69,8 @@ public class InteractionHandler : ScriptableObject
         if (_mostRecentInteraction.IsUnityNull() == false)
         {
             _mostRecentInteraction.Interact();
+            if (_mostRecentInteraction is UseInteraction)
+                _mostRecentInteraction.StartDelayReentry();
             ExitInteractionRange(_mostRecentInteraction);
         }
     }

@@ -10,6 +10,7 @@ public class PlayerInput : InputMono
     public bool Interact => Input.GetKeyDown(KeyCode.Space);
     public bool ReturnItem => Input.GetKeyDown(KeyCode.X);
     public bool SwitchCamera => Input.GetKeyDown(KeyCode.E);
+    public bool RotateCamera => Input.GetKey(KeyCode.R);
 
     public override bool HasInput3D()
     {

@@ -22,6 +22,7 @@ public class MessageController : MonoBehaviour
     public void WriteMessage(string message)
     {
         tmpro.DOKill();
+        tmpro.text = "";
         var seq = DOTween.Sequence();
 
         seq.Append(tmpro.DOText(message, messageSpeed));

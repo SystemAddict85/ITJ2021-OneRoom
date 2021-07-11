@@ -17,6 +17,7 @@ public class AnimatorEventHelper : MonoBehaviour
     public void ChangeParameterName(string newName) => parameterName = newName;
 
     public void ChangeBooleanParameter(bool value) => _anim.SetBool(parameterName, value);
+    public void ToggleBooleanParameter() => _anim.SetBool(parameterName, !_anim.GetBool(parameterName));
     public void ChangeIntegerParameter(int value) => _anim.SetInteger(parameterName, value);
     public void ChangeFloatParameter(float value) => _anim.SetFloat(parameterName, value);
 }

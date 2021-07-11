@@ -5,11 +5,21 @@ public class PlayerMoveController : MoveController
     private Animator _anim;
     private SpriteRenderer _rend;
 
+    private PlayerCameraController _playerCam;
     protected override void Awake()
     {
+        _playerCam = GetComponent<PlayerCameraController>();
         base.Awake();
         _anim = GetComponent<Animator>();
         _rend = GetComponent<SpriteRenderer>();
+    }
+
+    protected override void Update()
+    {
+        if (_playerCam.IsRotatingCamera)
+            return;
+        
+        base.Update();
     }
 
     protected override void NoInput()

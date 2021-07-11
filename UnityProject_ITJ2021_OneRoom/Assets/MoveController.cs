@@ -20,7 +20,7 @@ public class MoveController : MonoBehaviour
     public void Toggle3DControl(bool enableMove3D) => canMove3D = enableMove3D;
     public void ToggleControl(bool control) => canMove = control;
 
-    private void Update()
+    protected virtual void Update()
     {
         
         if (!canMove || (canMove3D == false && input.HasInput2D() == false) || (canMove3D && input.HasInput3D() == false))

@@ -9,8 +9,8 @@ public class UseInteraction : Interaction
     public override void Interact()
     {
         base.Interact();
-        if(type == InteractionType.Use)
-            handler.UseItemOnInteraction(this);
+        // if(type == InteractionType.Use)
+        //     handler.UseItemOnInteraction(this);
         Debug.Log($"Interacted with: {InteractionName}.");
     }
 
@@ -25,6 +25,7 @@ public class UseInteraction : Interaction
     {
         if (other.CompareTag("Player"))
         {
+            _isInRange = true;
             var player = other.GetComponent<PlayerInteractor>();
 
             bool playerEquipped = player.equippedItem != null;
@@ -34,5 +35,7 @@ public class UseInteraction : Interaction
             onEnter?.Invoke();
         }
     }
+
+   
     
 }
