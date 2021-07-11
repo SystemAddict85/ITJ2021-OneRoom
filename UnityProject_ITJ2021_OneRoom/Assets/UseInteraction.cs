@@ -1,8 +1,10 @@
 ﻿using System;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class UseInteraction : Interaction
 {
+    public UnityEvent onWrongEquipment, onCorrectEquipment;
     public Interaction requiredInteraction;
     public override void Interact()
     {
@@ -15,6 +17,8 @@ public class UseInteraction : Interaction
     public void HasEquipment(Interaction reqItem)
     {
         Debug.Log($"Used {reqItem.InteractionName} on {InteractionName} ");
+        handler.ExitInteractionRange(this);
+        onCorrectEquipment?.Invoke();
     }
     
     protected override void OnTriggerEnter(Collider other)

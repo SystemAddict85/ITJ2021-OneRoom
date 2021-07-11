@@ -23,6 +23,9 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Interaction.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/PlayerCameraController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/MessageController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/AnimatorEventHelper.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/ExitMenu.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/A5172B54-7855-499D-BC8D-9D50552F0797/38/f84aac47/Debug.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/RoomController.cs" root0="FORCE_HIGHLIGHTING" />
@@ -32,19 +35,22 @@
   <component name="IdeDocumentHistory">
     <changedPaths>
       <option value="$PROJECT_DIR$/Assets/BillboardSprite.cs" />
-      <option value="$PROJECT_DIR$/Assets/RoomController.cs" />
-      <option value="$PROJECT_DIR$/Assets/RoomEventHandler.cs" />
       <option value="$PROJECT_DIR$/Assets/MoveController.cs" />
       <option value="$PROJECT_DIR$/Assets/ExitMenu.cs" />
       <option value="$PROJECT_DIR$/Assets/PlayerMoveController.cs" />
       <option value="$PROJECT_DIR$/Assets/PlayerEquippedItem.cs" />
-      <option value="$PROJECT_DIR$/Assets/PlayerInput.cs" />
-      <option value="$PROJECT_DIR$/Assets/Interaction.cs" />
-      <option value="$PROJECT_DIR$/Assets/UseInteraction.cs" />
-      <option value="$PROJECT_DIR$/Assets/PickupInteraction.cs" />
-      <option value="$PROJECT_DIR$/Assets/PlayerInteractor.cs" />
+      <option value="$PROJECT_DIR$/Assets/AnimatorEventHelper.cs" />
       <option value="$PROJECT_DIR$/Assets/ContextButton.cs" />
+      <option value="$PROJECT_DIR$/Assets/Interaction.cs" />
       <option value="$PROJECT_DIR$/Assets/InteractionHandler.cs" />
+      <option value="$PROJECT_DIR$/Assets/PlayerInteractor.cs" />
+      <option value="$PROJECT_DIR$/Assets/UseInteraction.cs" />
+      <option value="$PROJECT_DIR$/Assets/PlayerInput.cs" />
+      <option value="$PROJECT_DIR$/Assets/PlayerCameraController.cs" />
+      <option value="$PROJECT_DIR$/Assets/MessageController.cs" />
+      <option value="$PROJECT_DIR$/Assets/PickupInteraction.cs" />
+      <option value="$PROJECT_DIR$/Assets/RoomEventHandler.cs" />
+      <option value="$PROJECT_DIR$/Assets/RoomController.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1v5HzLazd2eqDT3iEwuCqfiOjei" />
@@ -90,7 +96,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1625845291970</updated>
-      <workItem from="1625845296206" duration="28196000" />
+      <workItem from="1625845296206" duration="43485000" />
     </task>
     <servers />
   </component>

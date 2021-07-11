@@ -42,7 +42,7 @@ public class ContextButton : MonoBehaviour
     private void EnterInteractionRange(Interaction interact)
     {
         _rect.SetParent(interact.transform);
-        _rect.localPosition = Vector3.up;
+        _rect.position = interact.ContextPosition;
         UpdateVisuals(interact);
         ToggleButton(true);
     }

@@ -12,3 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b80e7bbb9b99486793879b7a5eaff79d, type: 3}
   m_Name: RoomEventHandler
   m_EditorClassIdentifier: 
+  timeToMove: 2

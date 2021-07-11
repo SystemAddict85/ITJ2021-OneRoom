@@ -46,14 +46,20 @@ public class InteractionHandler : ScriptableObject
             onItemPickup?.Invoke(item);
     }
 
-    public void UseItemOnInteraction(Interaction equippedInteraction)
+    public bool UseItemOnInteraction(Interaction equippedInteraction)
     {
         if (_mostRecentInteraction is UseInteraction)
         {
             var use = (UseInteraction) _mostRecentInteraction;
             if (use.requiredInteraction == equippedInteraction)
+            {
                 use.HasEquipment(equippedInteraction);
+                return true;
+            }
+            else
+                use.onWrongEquipment?.Invoke();
         }
+        return false;
     }
 
     public void Interact()
@@ -61,6 +67,7 @@ public class InteractionHandler : ScriptableObject
         if (_mostRecentInteraction.IsUnityNull() == false)
         {
             _mostRecentInteraction.Interact();
+            ExitInteractionRange(_mostRecentInteraction);
         }
     }
 }

@@ -28,11 +28,11 @@ public class PlayerInteractor : MonoBehaviour
 
         equippedItem = (PickupInteraction) interaction;
         equippedItem.transform.parent = transform;
-        equippedItem.GetComponent<Collider>().enabled = false;
+        equippedItem.ToggleReadyToInteract(false);
         handler.ExitInteractionRange(equippedItem);
         equippedItem.transform.DOKill();
         equippedItem.transform.DOLocalMove(equipOffset, .5f)
-            .OnComplete(()=> TweenPingPong(equipOffset, equipOffset + bounceOffset ));
+            .OnComplete(() => TweenPingPong(equipOffset, equipOffset + bounceOffset));
     }
 
     private void TweenPingPong(Vector3 from, Vector3 to)
@@ -50,7 +50,11 @@ public class PlayerInteractor : MonoBehaviour
         if (_input.Interact && equippedItem.IsUnityNull())
             handler.Interact();
         else if (_input.Interact && equippedItem.IsUnityNull() == false)
-            handler.UseItemOnInteraction(equippedItem);
+        {
+            var usedItem= handler.UseItemOnInteraction(equippedItem);
+            if (usedItem)
+                ReturnItem();
+        }
         else if (_input.ReturnItem && equippedItem != null)
             ReturnItem();
     }
