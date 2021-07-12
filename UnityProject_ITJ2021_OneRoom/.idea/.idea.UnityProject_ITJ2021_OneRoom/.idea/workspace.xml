@@ -29,6 +29,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/AnimatorEventHelper.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/ExitMenu.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/A5172B54-7855-499D-BC8D-9D50552F0797/38/f84aac47/Debug.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/SoundController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/RoomController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/BillboardSprite.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/Button.cs" root0="SKIP_HIGHLIGHTING" />
@@ -49,12 +50,13 @@
       <option value="$PROJECT_DIR$/Assets/MoveController.cs" />
       <option value="$PROJECT_DIR$/Assets/PlayerMoveController.cs" />
       <option value="$PROJECT_DIR$/Assets/Puzzle.cs" />
-      <option value="$PROJECT_DIR$/Assets/UseInteraction.cs" />
       <option value="$PROJECT_DIR$/Assets/Interaction.cs" />
       <option value="$PROJECT_DIR$/Assets/InteractionHandler.cs" />
       <option value="$PROJECT_DIR$/Assets/PlayerCameraController.cs" />
       <option value="$PROJECT_DIR$/Assets/RestartMenu.cs" />
       <option value="$PROJECT_DIR$/Assets/MessageController.cs" />
+      <option value="$PROJECT_DIR$/Assets/SoundController.cs" />
+      <option value="$PROJECT_DIR$/Assets/UseInteraction.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1v5HzLazd2eqDT3iEwuCqfiOjei" />
@@ -101,7 +103,7 @@
       <option name="presentableId" value="Default" />
       <updated>1625845291970</updated>
       <workItem from="1625845296206" duration="43485000" />
-      <workItem from="1626032880284" duration="9384000" />
+      <workItem from="1626032880284" duration="14218000" />
     </task>
     <servers />
   </component>

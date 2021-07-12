@@ -11,12 +11,12 @@ public class UseInteraction : Interaction
         base.Interact();
         // if(type == InteractionType.Use)
         //     handler.UseItemOnInteraction(this);
-        Debug.Log($"Interacted with: {InteractionName}.");
+        //Debug.Log($"Interacted with: {InteractionName}.");
     }
 
     public void HasEquipment(Interaction reqItem)
     {
-        Debug.Log($"Used {reqItem.InteractionName} on {InteractionName} ");
+        //Debug.Log($"Used {reqItem.InteractionName} on {InteractionName} ");
         handler.ExitInteractionRange(this);
         onCorrectEquipment?.Invoke();
     }
