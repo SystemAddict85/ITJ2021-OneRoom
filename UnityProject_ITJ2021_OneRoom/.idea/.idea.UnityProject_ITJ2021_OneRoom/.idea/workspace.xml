@@ -54,9 +54,9 @@
       <option value="$PROJECT_DIR$/Assets/InteractionHandler.cs" />
       <option value="$PROJECT_DIR$/Assets/PlayerCameraController.cs" />
       <option value="$PROJECT_DIR$/Assets/RestartMenu.cs" />
-      <option value="$PROJECT_DIR$/Assets/MessageController.cs" />
       <option value="$PROJECT_DIR$/Assets/SoundController.cs" />
       <option value="$PROJECT_DIR$/Assets/UseInteraction.cs" />
+      <option value="$PROJECT_DIR$/Assets/MessageController.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1v5HzLazd2eqDT3iEwuCqfiOjei" />
@@ -104,6 +104,7 @@
       <updated>1625845291970</updated>
       <workItem from="1625845296206" duration="43485000" />
       <workItem from="1626032880284" duration="14218000" />
+      <workItem from="1626067926692" duration="586000" />
     </task>
     <servers />
   </component>
