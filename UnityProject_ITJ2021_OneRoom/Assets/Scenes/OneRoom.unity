@@ -2562,7 +2562,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  puzzleSatisfied: 1
+  puzzleSatisfied: 0
 --- !u!114 &188686044 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8452289483936544, guid: c87122e45a9ab9e49a224c2799608a3c, type: 3}
@@ -3764,7 +3764,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  puzzleSatisfied: 1
+  puzzleSatisfied: 0
 --- !u!114 &337625576 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8452289483936544, guid: c87122e45a9ab9e49a224c2799608a3c, type: 3}
@@ -5804,7 +5804,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  puzzleSatisfied: 1
+  puzzleSatisfied: 0
 --- !u!114 &768235869 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8452289483936544, guid: c87122e45a9ab9e49a224c2799608a3c, type: 3}
@@ -6405,7 +6405,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  puzzleSatisfied: 0
+  puzzleSatisfied: 1
 --- !u!114 &875266536 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8452289483936544, guid: c87122e45a9ab9e49a224c2799608a3c, type: 3}
@@ -15663,7 +15663,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  puzzleSatisfied: 0
+  puzzleSatisfied: 1
 --- !u!1001 &504626641276020473
 PrefabInstance:
   m_ObjectHideFlags: 0
